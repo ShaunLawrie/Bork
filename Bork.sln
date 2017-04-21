@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bork.Notifications", "src\Bork.Notifications\Bork.Notifications.csproj", "{7917D330-8A55-4292-9DF3-441BFB607583}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bork.Notifications.Tests", "tests\Bork.Notifications.Tests\Bork.Notifications.Tests.csproj", "{EDDE3DD8-29CC-4680-A487-83D0B3F31135}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{800A58EB-0412-4518-A799-4132AF326FB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bork.Api", "src\Bork.Api\Bork.Api.csproj", "{6871152F-389D-44AA-96EB-AF7E756B6061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bork.Contracts", "src\Bork.Contracts\Bork.Contracts.csproj", "{61AE2CC2-B12A-4C01-82C0-D0CA8A7E612F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bork.Web", "src\Bork.Web\Bork.Web.csproj", "{B730D08E-8F6D-400F-B62A-D3436F6762F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7917D330-8A55-4292-9DF3-441BFB607583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7917D330-8A55-4292-9DF3-441BFB607583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7917D330-8A55-4292-9DF3-441BFB607583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7917D330-8A55-4292-9DF3-441BFB607583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDE3DD8-29CC-4680-A487-83D0B3F31135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDE3DD8-29CC-4680-A487-83D0B3F31135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDE3DD8-29CC-4680-A487-83D0B3F31135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDE3DD8-29CC-4680-A487-83D0B3F31135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6871152F-389D-44AA-96EB-AF7E756B6061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6871152F-389D-44AA-96EB-AF7E756B6061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6871152F-389D-44AA-96EB-AF7E756B6061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6871152F-389D-44AA-96EB-AF7E756B6061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61AE2CC2-B12A-4C01-82C0-D0CA8A7E612F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61AE2CC2-B12A-4C01-82C0-D0CA8A7E612F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61AE2CC2-B12A-4C01-82C0-D0CA8A7E612F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61AE2CC2-B12A-4C01-82C0-D0CA8A7E612F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B730D08E-8F6D-400F-B62A-D3436F6762F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B730D08E-8F6D-400F-B62A-D3436F6762F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B730D08E-8F6D-400F-B62A-D3436F6762F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B730D08E-8F6D-400F-B62A-D3436F6762F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDDE3DD8-29CC-4680-A487-83D0B3F31135} = {800A58EB-0412-4518-A799-4132AF326FB3}
+	EndGlobalSection
+EndGlobal

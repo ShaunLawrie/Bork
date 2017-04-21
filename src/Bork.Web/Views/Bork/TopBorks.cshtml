@@ -1,0 +1,36 @@
+﻿@model TopBorksViewModel
+@foreach (var bork in Model.TopBorks)
+{
+    @if (@bork.Type == "bork")
+    {
+        <div class="panel panel-default">
+            <div class="panel-body @(@bork.UserName == Model.Username ? "self-bork" : "")">
+                <b>@@@bork.UserName</b><span class="bork-time">@bork.DateCreated</span>
+                <div class="bork-content">@bork.Content</div>
+                @if (@bork.UserName != Model.Username)
+                {
+                    <div class="rebork-container">
+                        <a href="#" onclick="rebork(this,event)" id="bork-@bork.Id" class="rebork-link">Re-bork this!</a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    @if (@bork.Type == "rebork")
+    {
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <b>@@@bork.UserName</b><span class="bork-time">@bork.DateCreated</span>
+                <div class="bork-content">ReBork @@@bork.OriginalUserName:<br/><br />
+                    <div class="rebork-content">@bork.OriginalContent</div>
+                </div>
+                @if (@bork.OriginalUserName != Model.Username && @bork.UserName != Model.Username)
+                {
+                    <div class="rebork-container">
+                        <a href="#" onclick="rebork(this,event)" id="bork-@bork.OriginalBorkId" class="rebork-link">Re-bork this!</a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

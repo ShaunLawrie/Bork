@@ -1,0 +1,153 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #d4bda4;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#big-username {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6b6b6b;
+}
+
+.rebork-content {
+    background: #fff1f1;
+    border: solid 1px #d1d1d1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: -10px;
+}
+
+.self-bork {
+    background: #fffaf1;
+}
+
+.bork-time {
+    float: right;
+}
+
+.rebork-container {
+    margin-top: 10px;
+}
+
+.bork-content {
+    margin-top: 10px;
+}
+
+.spaced-as {
+    min-height: 15px;
+}
+
+#profile-stats > div {
+    padding-bottom: 8px;
+}
+
+#profile-detail {
+
+    text-align: center;
+}
+
+.profile-outer {
+    margin-bottom: 15px;
+}
+
+.flexy {
+    display: flex;
+}
+
+.stat-header {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.stat {
+    color: #d36607;
+    font-size: 1.5em;
+}
+
+.flexy > div {
+    flex: auto;
+    padding: 15px;
+}
+
+.profile-outer {
+    overflow: hidden;
+}
+
+.profile-outer > div {
+    padding-top: 15px;
+}
+
+.profile-image-container {
+    border: solid 1px #888888;
+    width: 16em;
+    height: 16em;
+    margin: auto;
+    background: url("/images/placeholder.jpg");
+    background-size: cover;
+}
+
+.white-bg {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.outlined {
+    border: solid 1px #f00 !important;
+}
+
+.bigform {
+    margin-top: 15px!important;
+}
+
+.bigform input {
+    max-width: inherit;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* buttons and links extension to use brackets: [ click me ] */
+.btn-bracketed::before {
+    display: inline-block;
+    content: "[";
+    padding-right: 0.5em;
+}
+
+.btn-bracketed::after {
+    display: inline-block;
+    content: "]";
+    padding-left: 0.5em;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

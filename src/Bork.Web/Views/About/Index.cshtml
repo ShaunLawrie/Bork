@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<div class="row white-bg">
+    <div class="col-md-12">
+        <h2>Example Web App for Performance Testing Testing</h2>
+<pre>
+      ,
+      |`-.__      ____    ___   ____   __  _
+      / ' _/     |    \  /   \ |    \ |  |/ |
+     ****`       |  o  ||     ||  D  )|  ' /
+    /    }       |     ||  O  ||    / |    \
+   /  \ /        |  O  ||     ||    \ |     \
+\ /`   \\\       |     ||     ||  .  \|  .  |
+ `\____/_\\      |_____| \___/ |__|\_||__|\_|
+</pre>
+
+        <h2>Requirements</h2>
+
+        <ul>
+            <li>RabbitMQ exposed locally on port xxxxx</li>
+            <li>PostgreSQL exposed locally on port xxxxx</li>
+        </ul>
+
+        <h2>Structure</h2>
+
+        <ul>
+            <li><b>Bork.Web</b><br />ASP.NET Core web front end for a Twitter style application. Only contains authentication and view logic.</li>
+            <li><b>Bork.Api</b><br />ASP.NET Core Web API for the web front end and notification processor to use. Contains business logic, data access etc.</li>
+            <li><b>Bork.Notifications</b><br />.NET Core Console Application for async notification processing from a RabbitMQ queue.</li>
+        </ul>
+
+        <h2>Description</h2>
+
+        <p>
+            This is a Twitter clone for the purpose of practicing performance scripting.
+            Users log into the web front end and are presented with a recent borks feed.
+            The user can create a new bork or re-bork someone elses.
+            If a user has their bork re-borked they are sent a notification via "email" (this doesn't actually send emails)
+        </p>
+
+        <h2>Features</h2>
+
+        <ul>
+            <li>Dependency Injection via StructureMap</li>
+            <li>Logging with NLog</li>
+            <li>Message queuing with RabbitMQ</li>
+            <li>PostgreSQL with EF7</li>
+        </ul>
+    </div>
+</div>

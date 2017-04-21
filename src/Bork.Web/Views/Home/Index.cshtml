@@ -1,0 +1,59 @@
+﻿@model HomeViewModel
+@{
+ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-md-3 profile-outer">
+        <div class="col-md-12 white-bg">
+            <div class="row" id="profile">
+                <div class="row">
+                    <div class="profile-image-container">
+
+                    </div>
+                </div>
+                <div class="row" id="profile-detail">
+                    <div>
+                        <span id="big-username">@@@Model.Username</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row flexy" id="profile-stats">
+                <div>
+                    <span class="stat-header">Borks</span><br/>
+                    <span class="stat">@Model.Borks</span>
+                </div>
+                <div>
+                    <span class="stat-header">Re-Borks</span><br />
+                    <span class="stat">@Model.ReBorks</span>
+                </div>
+                <div>
+                    <span class="stat-header">Re-Borked</span><br />
+                    <span class="stat">@Model.ReBorked</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7 white-bg">
+        <div class="col-md-12">
+            <div class="row">
+                <form class="bigform" id="new-bork-form" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="content" name="content" type="text" class="form-control" placeholder="Woof...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit" id="submit-bork">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row" id="top-borks-container">
+                @Html.Partial("../Bork/TopBorks", Model.TopBorksModel)
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Home.js" asp-append-version="true"></script>
+}
