@@ -50,7 +50,7 @@ namespace Bork.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ApplicationDbContext dbContext)
         {
             loggerFactory
                 .AddConsole()
@@ -77,6 +77,8 @@ namespace Bork.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            dbContext.Database.Migrate();
         }
 
         private IServiceProvider ConfigureStructureMap(IServiceCollection services)

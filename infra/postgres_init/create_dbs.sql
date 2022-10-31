@@ -1,0 +1,3 @@
+CREATE DATABASE borkapi;
+CREATE DATABASE borkweb;
+CREATE DATABASE borknotification;

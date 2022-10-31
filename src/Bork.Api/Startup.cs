@@ -38,12 +38,14 @@ namespace Bork.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, BorkDbContext dbContext)
         {
             loggerFactory
                 .AddDebug()
                 .AddConsole();
             app.UseMvc();
+
+            dbContext.Database.Migrate();
         }
 
         private IServiceProvider ConfigureStructureMap(IServiceCollection services)

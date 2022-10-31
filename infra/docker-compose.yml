@@ -1,0 +1,50 @@
+version: '3.5'
+
+name: "bork-infra"
+
+services:
+  postgres:
+    container_name: "postgres_db"
+    image: "postgres:13.0"
+    environment:
+      POSTGRES_USER: "pguser"
+      POSTGRES_PASSWORD: "pgpass"
+      PGDATA: "/data/postgres"
+    volumes:
+       - "postgres:/data/postgres"
+       - "./postgres_init:/docker-entrypoint-initdb.d"
+    ports:
+      - "127.0.0.1:5432:5432"
+  
+  pgadmin:
+    container_name: "pgadmin"
+    image: "dpage/pgadmin4"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin@pgadmin.pgadmin"
+      PGADMIN_DEFAULT_PASSWORD: "pgadminpass"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+       - "pgadmin:/var/lib/pgadmin"
+    ports:
+      - "127.0.0.1:8080:80"
+
+  rabbitmq:
+    image: "rabbitmq:3-management-alpine"
+    container_name: "rabbitmq"
+    ports:
+      - "127.0.0.1:5672:5672"
+      - "127.0.0.1:15672:15672"
+    volumes:
+      - "rabbitmq_data:/var/lib/rabbitmq/"
+      - "rabbitmq_logs:/var/log/rabbitmq/"
+
+volumes:
+  postgres:
+  pgadmin:
+  rabbitmq_data:
+  rabbitmq_logs:
+  
+networks:
+  default:
+    name: "waypoint"
+    external: true
